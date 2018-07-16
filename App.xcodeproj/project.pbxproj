@@ -209,11 +209,11 @@
 		7B56121020F6412C0098CE55 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				7B56126C20F642490098CE55 /* Pickers */,
 				7B56121120F6412C0098CE55 /* Core */,
 				7B56121F20F6412C0098CE55 /* Extensions */,
-				7B56122220F6412C0098CE55 /* ViewControllers */,
 				7B56121A20F6412C0098CE55 /* Style */,
+				7BFEF15820FCE3CB00B7BF55 /* Views */,
+				7B56122220F6412C0098CE55 /* ViewControllers */,
 				7B56122E20F6412C0098CE55 /* Router */,
 				7B56121720F6412C0098CE55 /* ViewFactory */,
 				7B56122820F6412C0098CE55 /* Supporting Files */,
@@ -224,6 +224,7 @@
 		7B56121120F6412C0098CE55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7B56126C20F642490098CE55 /* Pickers */,
 				7B56121220F6412C0098CE55 /* ImageDownloader.swift */,
 				7B56121320F6412C0098CE55 /* ViewController+Selection.swift */,
 				7B56121420F6412C0098CE55 /* ViewModel+Selection.swift */,
@@ -396,6 +397,13 @@
 				7B56129B20F644000098CE55 /* StringFormViewController.swift */,
 			);
 			path = FullscreenText;
+			sourceTree = "<group>";
+		};
+		7BFEF15820FCE3CB00B7BF55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C5F72C043653DFB4C5E321D6 /* Frameworks */ = {
