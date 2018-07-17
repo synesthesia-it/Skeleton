@@ -57,7 +57,9 @@
 		7B56129C20F644010098CE55 /* StringFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129B20F644000098CE55 /* StringFormViewController.swift */; };
 		7B56129E20F645430098CE55 /* Router+FormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129D20F645430098CE55 /* Router+FormSheet.swift */; };
 		7B5612A020F646740098CE55 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129F20F646740098CE55 /* LoremIpsum.swift */; };
-		7BFEF16A20FE0F8000B7BF55 /* DataManager+Rx+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */; };
+		7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16C20FE120700B7BF55 /* Environment.swift */; };
+		7BFEF17020FE16BC00B7BF55 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16E20FE142800B7BF55 /* Logger.swift */; };
+		7BFEF17120FE171F00B7BF55 /* MoyaProvider+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */; };
 		E5DF305E8F908CD6D939BBFB /* Pods_ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA24F43748D333F6771088F /* Pods_ModelLayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,7 +143,9 @@
 		7B56129B20F644000098CE55 /* StringFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormViewController.swift; sourceTree = "<group>"; };
 		7B56129D20F645430098CE55 /* Router+FormSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Router+FormSheet.swift"; sourceTree = "<group>"; };
 		7B56129F20F646740098CE55 /* LoremIpsum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
-		7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Rx+Internal.swift"; sourceTree = "<group>"; };
+		7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Utilities.swift"; sourceTree = "<group>"; };
+		7BFEF16C20FE120700B7BF55 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		7BFEF16E20FE142800B7BF55 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		80913DCDF5D263AD534E7CB9 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		89C7BA52DF521B04920CD0E1 /* Pods-ModelLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.debug.xcconfig"; sourceTree = "<group>"; };
 		AD28076C8251B2688003162B /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +316,8 @@
 		7B56123420F6412C0098CE55 /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7BFEF16C20FE120700B7BF55 /* Environment.swift */,
+				7BFEF16E20FE142800B7BF55 /* Logger.swift */,
 				7B56123520F6412C0098CE55 /* Models */,
 				7BFEF16B20FE113000B7BF55 /* API */,
 				7B56123A20F6412C0098CE55 /* Manager */,
@@ -344,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				7B56123B20F6412C0098CE55 /* DataManager.swift */,
-				7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */,
+				7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */,
 				7B56123D20F6412C0098CE55 /* Errors.swift */,
 				7B56123E20F6412C0098CE55 /* DataManager+Rx.swift */,
 			);
@@ -558,13 +564,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Boomerang/Boomerang.framework",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
-				"${BUILT_PRODUCTS_DIR}/Boomerang/Boomerang.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -586,13 +592,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Boomerang.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Boomerang.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -680,10 +686,10 @@
 				7B56129020F642760098CE55 /* TextItemView.swift in Sources */,
 				7B56125720F6412C0098CE55 /* Router+Preview.swift in Sources */,
 				7B56129920F6435E0098CE55 /* UIImagePickerController+Rx.swift in Sources */,
+				7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */,
 				7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */,
 				7B56124E20F6412C0098CE55 /* SplashViewController.swift in Sources */,
 				7B56124F20F6412C0098CE55 /* SplashViewModel.swift in Sources */,
-				7BFEF16A20FE0F8000B7BF55 /* DataManager+Rx+Internal.swift in Sources */,
 				7B56129320F642760098CE55 /* ImagePickerItemView.swift in Sources */,
 				7B56124920F6412C0098CE55 /* UIFont+Utilities.swift in Sources */,
 				7B56124620F6412C0098CE55 /* Scene.swift in Sources */,
@@ -713,9 +719,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5612A020F646740098CE55 /* LoremIpsum.swift in Sources */,
+				7BFEF17120FE171F00B7BF55 /* MoyaProvider+Utilities.swift in Sources */,
 				7B56126320F6415B0098CE55 /* Observable+Gloss.swift in Sources */,
 				7B56126620F6415B0098CE55 /* DataManager.swift in Sources */,
 				7B56126420F6415B0098CE55 /* Response+Error.swift in Sources */,
+				7BFEF17020FE16BC00B7BF55 /* Logger.swift in Sources */,
 				7B56126520F6415B0098CE55 /* Response+Gloss.swift in Sources */,
 				7B56126920F6415B0098CE55 /* DataManager+Rx.swift in Sources */,
 				7B56126820F6415B0098CE55 /* Errors.swift in Sources */,

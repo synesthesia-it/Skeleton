@@ -3,6 +3,7 @@ platform :ios, '10.0'
 
 def model_pods
     shared_pods
+    pod 'RainbowSwift'
     pod 'Alamofire'
     pod 'Moya/RxSwift'
     pod 'Gloss'

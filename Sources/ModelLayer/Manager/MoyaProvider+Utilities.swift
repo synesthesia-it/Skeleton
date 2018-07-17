@@ -22,3 +22,16 @@ extension Reactive where Base: MoyaProviderType {
         return customRequest(token).mapArray(type: T.self, forKeyPath: keyPath)
     }
 }
+
+extension DataManager {
+    static func customPlugins() -> [PluginType] {
+        var array:[PluginType] = []
+        let f:(_ separator: String, _ terminator: String, _ items: Any...) -> Void = { (separator:String, terminator:String, items:Any...) -> Void in
+            let string = Array(items).compactMap { $0 as? String}.joined(separator: separator) + terminator
+            Logger.log(string, level: .network)
+            return
+        }
+        array = [NetworkLoggerPlugin(verbose: true, cURL:true, output:f)]
+        return array
+    }
+}

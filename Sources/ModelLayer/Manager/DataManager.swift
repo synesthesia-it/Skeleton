@@ -3,7 +3,5 @@ import RxSwift
 import Gloss
 
 class DataManager : ReactiveCompatible {
-    static let provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin(verbose: true, cURL: true)])
+    static let provider = MoyaProvider<API>(plugins: DataManager.customPlugins())
 }
-
-

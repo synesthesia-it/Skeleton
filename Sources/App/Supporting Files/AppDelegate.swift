@@ -1,4 +1,5 @@
 import UIKit
+import ModelLayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -6,6 +7,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let environment: Environment
+        
+        //Entry point to add more configurations
+        #if DEVEL || DEBUG
+            environment = .devel
+            Logger.logLevel = .verbose
+        #else
+            environment = .production
+            Logger.logLevel = .none
+        #endif
+        Environment.setup(with: environment)
+
         Router.start(self)
         // Override point for customization after application launch.
         return true
