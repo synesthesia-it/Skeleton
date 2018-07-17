@@ -30,7 +30,6 @@
 		7B56125220F6412C0098CE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B56122920F6412C0098CE55 /* Assets.xcassets */; };
 		7B56125320F6412C0098CE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B56122A20F6412C0098CE55 /* LaunchScreen.storyboard */; };
 		7B56125420F6412C0098CE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56122C20F6412C0098CE55 /* AppDelegate.swift */; };
-		7B56125520F6412C0098CE55 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B56122D20F6412C0098CE55 /* Info.plist */; };
 		7B56125620F6412C0098CE55 /* Router+Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56122F20F6412C0098CE55 /* Router+Safari.swift */; };
 		7B56125720F6412C0098CE55 /* Router+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56123020F6412C0098CE55 /* Router+Preview.swift */; };
 		7B56125820F6412C0098CE55 /* Router+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56123120F6412C0098CE55 /* Router+Alert.swift */; };
@@ -58,6 +57,7 @@
 		7B56129C20F644010098CE55 /* StringFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129B20F644000098CE55 /* StringFormViewController.swift */; };
 		7B56129E20F645430098CE55 /* Router+FormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129D20F645430098CE55 /* Router+FormSheet.swift */; };
 		7B5612A020F646740098CE55 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129F20F646740098CE55 /* LoremIpsum.swift */; };
+		7BFEF16A20FE0F8000B7BF55 /* DataManager+Rx+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */; };
 		E5DF305E8F908CD6D939BBFB /* Pods_ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA24F43748D333F6771088F /* Pods_ModelLayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +141,7 @@
 		7B56129B20F644000098CE55 /* StringFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormViewController.swift; sourceTree = "<group>"; };
 		7B56129D20F645430098CE55 /* Router+FormSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Router+FormSheet.swift"; sourceTree = "<group>"; };
 		7B56129F20F646740098CE55 /* LoremIpsum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
+		7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Rx+Internal.swift"; sourceTree = "<group>"; };
 		80913DCDF5D263AD534E7CB9 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		89C7BA52DF521B04920CD0E1 /* Pods-ModelLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.debug.xcconfig"; sourceTree = "<group>"; };
 		AD28076C8251B2688003162B /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +267,8 @@
 		7B56122220F6412C0098CE55 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B56129A20F644000098CE55 /* FullscreenText */,
+				7BFEF16520FDFF8100B7BF55 /* ListForm */,
 				7B56122320F6412C0098CE55 /* Splash */,
 				7B56122720F6412C0098CE55 /* NavigationController.swift */,
 			);
@@ -310,8 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				7B56123520F6412C0098CE55 /* Models */,
-				7B56123620F6412C0098CE55 /* Utilities */,
+				7BFEF16B20FE113000B7BF55 /* API */,
 				7B56123A20F6412C0098CE55 /* Manager */,
+				7B56123620F6412C0098CE55 /* Utilities */,
 				7B56123F20F6412C0098CE55 /* ModelLayer.h */,
 				7B56124020F6412C0098CE55 /* Info.plist */,
 			);
@@ -340,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				7B56123B20F6412C0098CE55 /* DataManager.swift */,
-				7B56123C20F6412C0098CE55 /* API.swift */,
+				7BFEF16920FE0F8000B7BF55 /* DataManager+Rx+Internal.swift */,
 				7B56123D20F6412C0098CE55 /* Errors.swift */,
 				7B56123E20F6412C0098CE55 /* DataManager+Rx.swift */,
 			);
@@ -351,14 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				7B56127020F6425A0098CE55 /* Pickers.swift */,
-				7B56126E20F6425A0098CE55 /* ListFormViewController.swift */,
-				7B56126F20F6425A0098CE55 /* ListFormViewController.xib */,
-				7B56127120F6425A0098CE55 /* ListFormPickerViewController.xib */,
 				7B56129820F6435E0098CE55 /* UIImagePickerController+Rx.swift */,
-				7B56129A20F644000098CE55 /* FullscreenText */,
-				7B56128420F642760098CE55 /* Image */,
-				7B56128720F642760098CE55 /* ListElement */,
-				7B56127920F642750098CE55 /* Text */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -402,8 +399,29 @@
 		7BFEF15820FCE3CB00B7BF55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7B56127920F642750098CE55 /* Text */,
+				7B56128720F642760098CE55 /* ListElement */,
+				7B56128420F642760098CE55 /* Image */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7BFEF16520FDFF8100B7BF55 /* ListForm */ = {
+			isa = PBXGroup;
+			children = (
+				7B56126E20F6425A0098CE55 /* ListFormViewController.swift */,
+				7B56126F20F6425A0098CE55 /* ListFormViewController.xib */,
+				7B56127120F6425A0098CE55 /* ListFormPickerViewController.xib */,
+			);
+			path = ListForm;
+			sourceTree = "<group>";
+		};
+		7BFEF16B20FE113000B7BF55 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7B56123C20F6412C0098CE55 /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C5F72C043653DFB4C5E321D6 /* Frameworks */ = {
@@ -432,8 +450,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B5611A820F632340098CE55 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
-				7B56120A20F63B380098CE55 /* SwiftLint */,
 				197589F88FAAB0DD7E11246D /* [CP] Check Pods Manifest.lock */,
+				7B56120A20F63B380098CE55 /* SwiftLint */,
 				7B56115D20F632320098CE55 /* Sources */,
 				7B56115E20F632320098CE55 /* Frameworks */,
 				7B56115F20F632320098CE55 /* Resources */,
@@ -513,7 +531,6 @@
 			files = (
 				7B56129420F642760098CE55 /* ImagePickerItemView.xib in Resources */,
 				7B56125320F6412C0098CE55 /* LaunchScreen.storyboard in Resources */,
-				7B56125520F6412C0098CE55 /* Info.plist in Resources */,
 				7B56125020F6412C0098CE55 /* SplashViewController.xib in Resources */,
 				7B56127520F6425A0098CE55 /* ListFormViewController.xib in Resources */,
 				7B56125220F6412C0098CE55 /* Assets.xcassets in Resources */,
@@ -666,6 +683,7 @@
 				7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */,
 				7B56124E20F6412C0098CE55 /* SplashViewController.swift in Sources */,
 				7B56124F20F6412C0098CE55 /* SplashViewModel.swift in Sources */,
+				7BFEF16A20FE0F8000B7BF55 /* DataManager+Rx+Internal.swift in Sources */,
 				7B56129320F642760098CE55 /* ImagePickerItemView.swift in Sources */,
 				7B56124920F6412C0098CE55 /* UIFont+Utilities.swift in Sources */,
 				7B56124620F6412C0098CE55 /* Scene.swift in Sources */,

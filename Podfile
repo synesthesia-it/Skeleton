@@ -11,7 +11,6 @@ end
 
 def app_pods
     shared_pods
-    pod 'Boomerang', :git => "https://github.com/synesthesia-it/Boomerang.git", :branch => "master"
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'SnapKit'
@@ -30,6 +29,7 @@ end
 def shared_pods
     use_frameworks!
     inhibit_all_warnings!
+    pod 'Boomerang', :git => "https://github.com/synesthesia-it/Boomerang.git", :branch => "master"
     pod 'Localize-Swift'
     pod 'DateToolsSwift'
     pod 'RxSwift'
