@@ -1,6 +1,9 @@
 import UIKit
 import ModelLayer
 
+//This alias should enable the Logger everywhere without explicit need of ModelLayer import.
+typealias Logger = ModelLayer.Logger
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
