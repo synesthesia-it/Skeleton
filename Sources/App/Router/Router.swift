@@ -32,9 +32,39 @@ struct Router : RouterType {
     public static func from<Source> (_ source:Source, viewModel:ViewModelType) -> RouterAction where Source: UIViewController {
 
         switch viewModel {
+            
+        case let viewModel as ActionSheetViewModel :
+            let destination = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .actionSheet)
+            viewModel.actions().forEach { destination.addAction($0)}
+            return UIViewControllerRouterAction.modal(source: source, destination: destination, completion: nil)
+            
+        case let viewModel as SystemImagePickerViewModel :
+            return UIViewControllerRouterAction.custom {
+                UIImagePickerController.rx.createWithParent(source, animated: true, configureImagePicker: { (picker) in
+                    #if targetEnvironment(simulator)
+                    picker.sourceType = .photoLibrary
+                    #else
+                    switch viewModel.type {
+                    case .camera : picker.sourceType = .camera
+                    case .library : picker.sourceType = .photoLibrary
+                    }
+                    #endif
+                })
+                    .flatMap { $0.rx.didFinishPickingMediaWithInfo }
+                    .take(1)
+                    
+                    .map { info in
+                        return info[UIImagePickerControllerOriginalImage] as? UIImage
+                    }
+                    .subscribe(onNext: { image in
+                        viewModel.relay.accept([image ?? (UIImage())])
+                    }).disposed(by: source.disposeBag)
+            }
         case let viewModel as SceneViewModelType :
             if let destination = viewModel.sceneIdentifier.scene?.setup(with: viewModel) {
-                
+                if source is SplashViewController {
+                    return UIViewControllerRouterAction.replaceRootWith(destination: destination.withNavigation())
+                }
                 if viewModel is PickerItemViewModelType {
                     return UIViewControllerRouterAction.modal(source: source, destination: destination.withNavigation(), completion: nil)
                 }
