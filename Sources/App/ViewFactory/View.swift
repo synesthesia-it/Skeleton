@@ -11,8 +11,6 @@ import Boomerang
 
 enum View: String, ListIdentifier {
     
-    case test
-    
     //Pickers
     case listPickerElement
     case text
