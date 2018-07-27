@@ -2,6 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Bluetooth Peripheral</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Contacts</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>FaceID</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Health Share</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Health Update</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Media Library</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Motion</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>Music</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>NFC</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo Library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Reminders</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Siri</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speech Recognition</string>
+	<key>NSHomeKitUsageDescription</key>
+	<string>HomeKit</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
