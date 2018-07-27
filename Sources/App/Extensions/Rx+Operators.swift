@@ -40,7 +40,7 @@ func nonMarkedText(_ textInput: UITextInput) -> String? {
 
 func <-> <Base: UITextInput>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
-        .bind(to:textInput.text)
+        .bind(to: textInput.text)
     let bindToVariable = textInput.text
         .subscribe(onNext: { [weak base = textInput.base] _ in
             guard let base = base else {
@@ -82,7 +82,7 @@ func <-> <T>(property: ControlProperty<T>, variable: BehaviorRelay<T>) -> Dispos
     }
     
     let bindToUIDisposable = variable.asObservable()
-        .bind(to:property)
+        .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
             variable.accept(n)

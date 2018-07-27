@@ -89,6 +89,11 @@
 
 /* Begin PBXFileReference section */
 		1AA24F43748D333F6771088F /* Pods_ModelLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModelLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		272992F2210B5C160004ED30 /* Bonefile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Bonefile; sourceTree = "<group>"; };
+		272992F3210B5C160004ED30 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		272992F4210B5C160004ED30 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Podfile; sourceTree = "<group>"; };
+		272992F5210B5C160004ED30 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Gemfile; sourceTree = "<group>"; };
+		272992F6210B5C170004ED30 /* config.swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.swiftlint.yml; sourceTree = "<group>"; };
 		3A17AB53F4BFC7CA7CED7370 /* Pods-ModelLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.release.xcconfig"; sourceTree = "<group>"; };
 		470A98FDB6187D6925902415 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		7B56116120F632320098CE55 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,9 +188,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		272992F1210B5C070004ED30 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				272992F2210B5C160004ED30 /* Bonefile */,
+				272992F6210B5C170004ED30 /* config.swiftlint.yml */,
+				272992F5210B5C160004ED30 /* Gemfile */,
+				272992F3210B5C160004ED30 /* install.sh */,
+				272992F4210B5C160004ED30 /* Podfile */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		7B56115820F632320098CE55 = {
 			isa = PBXGroup;
 			children = (
+				272992F1210B5C070004ED30 /* Tools */,
 				7B56120F20F6412C0098CE55 /* Sources */,
 				7B56116220F632320098CE55 /* Products */,
 				1F55C8224A0BAA60E644FE55 /* Pods */,
@@ -339,6 +357,7 @@
 		7B56123620F6412C0098CE55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */,
 				7B56123720F6412C0098CE55 /* Observable+Gloss.swift */,
 				7B56123820F6412C0098CE55 /* Response+Error.swift */,
 				7B56123920F6412C0098CE55 /* Response+Gloss.swift */,
@@ -350,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				7B56123B20F6412C0098CE55 /* DataManager.swift */,
-				7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */,
 				7B56123D20F6412C0098CE55 /* Errors.swift */,
 				7B56123E20F6412C0098CE55 /* DataManager+Rx.swift */,
 			);

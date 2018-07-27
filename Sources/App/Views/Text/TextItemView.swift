@@ -17,20 +17,20 @@ enum TextTheme {
     case light
     case dark
     
-    var fontSize:CGFloat {
+    var fontSize: CGFloat {
         switch self {
         case .light : return 16
         default : return 14
         }
     }
     
-    var color : UIColor {
+    var color: UIColor {
         switch self {
         case .light : return .white
         default : return UIColor.black
         }
     }
-    var labelColor : UIColor {
+    var labelColor: UIColor {
         switch self {
         case .light : return .white
         default : return UIColor.black
@@ -40,8 +40,8 @@ enum TextTheme {
 
 class TextStyle: FormStyle {
     var style: TextStyles = .normal
-    var theme:TextTheme = .dark
-    init (_ style: TextStyles, theme:TextTheme = .dark) {
+    var theme: TextTheme = .dark
+    init (_ style: TextStyles, theme: TextTheme = .dark) {
         self.style = style
         self.theme = theme
     }
@@ -91,13 +91,13 @@ class TextItemView: UIView, ViewModelBindable, EmbeddableView {
             button.removeFromSuperview()
             button.rx.unbindAction()
             
-            self.textField.rightView = UIImageView(image: UIImage(named:"ic_dropdown_arrow"))
+            self.textField.rightView = UIImageView(image: UIImage(named: "ic_dropdown_arrow"))
             self.textField.rightViewMode = .always
             self.titleLabel.textColor = TextTheme.dark.labelColor
             self.titleLabel.text = viewModel.title
             let theme = TextTheme.dark
             self.textField.tintColor = theme.color
-             self.textField.attributedPlaceholder = StringStyle(.font(textField.font ?? .systemFont(ofSize: 10)),.color(theme.color.withAlphaComponent(0.3))).attributedString(from: viewModel.title)
+             self.textField.attributedPlaceholder = StringStyle(.font(textField.font ?? .systemFont(ofSize: 10)), .color(theme.color.withAlphaComponent(0.3))).attributedString(from: viewModel.title)
             self.textField.textColor = TextTheme.dark.color
             self.textField.font = UIFont.type(type: .roboto, weight: .regular, size: TextTheme.dark.fontSize)
             self.addSubview(button)
@@ -107,7 +107,7 @@ class TextItemView: UIView, ViewModelBindable, EmbeddableView {
             
             viewModel.enabledIf.subscribe(onNext: {[weak self] in
                 $0 == true ? self?.button.rx.bind(to: viewModel.selection, input: .openPicker) : self?.button.rx.unbindAction()
-                }).disposed(by:disposeBag)
+                }).disposed(by: disposeBag)
             viewModel.currentSelectedTitle.bind(to: textField.rx.text).disposed(by: disposeBag)
 
         case let viewModel as StringPickerItemViewModel :
@@ -118,7 +118,7 @@ class TextItemView: UIView, ViewModelBindable, EmbeddableView {
             
             let style = viewModel.style
             self.textField.font = UIFont.type(type: .roboto, weight: .regular, size: style.theme.fontSize)
-            self.textField.attributedPlaceholder = StringStyle(.font(textField.font ?? .systemFont(ofSize: 10)),.color(style.theme.color.withAlphaComponent(0.3))).attributedString(from: viewModel.title)
+            self.textField.attributedPlaceholder = StringStyle(.font(textField.font ?? .systemFont(ofSize: 10)), .color(style.theme.color.withAlphaComponent(0.3))).attributedString(from: viewModel.title)
       
             self.titleLabel.textColor = style.theme.labelColor
             
@@ -128,8 +128,8 @@ class TextItemView: UIView, ViewModelBindable, EmbeddableView {
             self.textField.textColor = style.theme.color
             
             let clearButton = UIButton()
-            clearButton.setImage(UIImage(named:"ic_cancel")?.tinted(style.theme.color), for: .normal)
-            clearButton.rx.tap.subscribe(onNext: {[weak self] _ in self?.textField.text = ""}).disposed(by:disposeBag)
+            clearButton.setImage(UIImage(named: "ic_cancel")?.tinted(style.theme.color), for: .normal)
+            clearButton.rx.tap.subscribe(onNext: {[weak self] _ in self?.textField.text = ""}).disposed(by: disposeBag)
             self.textField.rightView = clearButton
             self.textField.rightViewMode = .whileEditing
             self.textField.tintColor = style.theme.color

@@ -22,8 +22,8 @@ protocol Collectionable: KeyboardAvoidable {
     func setupCollectionView()
 }
 
-protocol Refreshable : Collectionable {
-    func setupRefreshable(viewModel:ListViewModelType)
+protocol Refreshable: Collectionable {
+    func setupRefreshable(viewModel: ListViewModelType)
 }
 
 protocol KeyboardAvoidable {
@@ -52,7 +52,7 @@ extension Collectionable  where Self: UIViewController {
     }
 }
 extension Refreshable {
-    func setupRefreshable(viewModel:ListViewModelType) {
+    func setupRefreshable(viewModel: ListViewModelType) {
         let refreshControl = UIRefreshControl()
         refreshControl.rx.bind(to: viewModel.dataHolder.reloadAction, input: nil)
         self.collectionView.addSubview(refreshControl)
@@ -188,7 +188,7 @@ extension UIViewController {
     }
     
 }
-extension Reactive where Base : UIViewController {
+extension Reactive where Base: UIViewController {
     func viewDidLoad() -> Observable<()> {
         return methodInvoked(#selector(UIViewController.viewDidLoad)).map {_ in return ()}
     }

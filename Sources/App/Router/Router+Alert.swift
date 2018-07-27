@@ -11,19 +11,19 @@ import UIKit
 import ModelLayer
 
 extension Router {
-    public static func confirm<Source:UIViewController>(title:String,message:String,confirmationTitle:String, from source:Source, action:@escaping (() -> Void)) -> RouterAction {
-        let alert = UIAlertController(title:title, message: message, preferredStyle: .alert)
+    public static func confirm<Source: UIViewController>(title: String, message: String, confirmationTitle: String, from source: Source, action:@escaping (() -> Void)) -> RouterAction {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
         return UIViewControllerRouterAction.modal(source: source, destination: alert, completion: nil)
     }
     
-    public static func error<Source:UIViewController>(_ error:APPError, from source:Source) -> RouterAction {
-        let alert = UIAlertController(title:error.title, message: error.message, preferredStyle: .alert)
+    public static func error<Source: UIViewController>(_ error: APPError, from source: Source) -> RouterAction {
+        let alert = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
         return UIViewControllerRouterAction.modal(source: source, destination: alert, completion: nil)
     }
-    public static func actions<Source:UIViewController>(fromSource source:Source, item:UIBarButtonItem, actions:[UIAlertAction]) -> RouterAction {
-        let alert = UIAlertController(title:nil, message: nil, preferredStyle: .actionSheet)
+    public static func actions<Source: UIViewController>(fromSource source: Source, item: UIBarButtonItem, actions: [UIAlertAction]) -> RouterAction {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         _ = actions.reduce(alert) { (accumulator, action)  in
             accumulator.addAction(action)

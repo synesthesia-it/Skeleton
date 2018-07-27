@@ -16,7 +16,7 @@ protocol PickerItemViewModelType: ItemViewModelType, SelectableViewModelType {
     var currentSelectedTitle: Observable<String> { get }
     var itemIdentifier: ListIdentifier { get set }
     var title: String { get set }
-    var enabledIf:Observable<Bool> { get set }
+    var enabledIf: Observable<Bool> { get set }
     var placeholder: String { get set }
     var error: ObservableError { get set }
     var externalSelection: Selection? { get set }

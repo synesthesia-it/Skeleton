@@ -43,10 +43,10 @@ class ListFormViewController: UIViewController, ViewModelBindable, Collectionabl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let size = collectionView.autosizeItemConstrainedToWidth(at: indexPath, itemsPerLine: 1)
-        return CGSize(width: size.width, height: max(40,size.height))
+        return CGSize(width: size.width, height: max(40, size.height))
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top:20, left:15, bottom:20, right:15)
+        return UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
     }
     
 }
@@ -92,7 +92,7 @@ class ListFormPickerViewController: UIViewController, ViewModelBindable, Selecta
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         guard let delegate = pickerView.dataSource as? PickerViewCombinedDelegate,
         let title = delegate.pickerView?(pickerView, titleForRow: row, forComponent: component) else { return nil }
-        return StringStyle(.font(.type(type: .roboto, weight: .bold, size: 36)),.color(.cadmiumOrange)).attributedString(from: title)
+        return StringStyle(.font(.type(type: .roboto, weight: .bold, size: 36)), .color(.cadmiumOrange)).attributedString(from: title)
     }
   
 }

@@ -10,13 +10,13 @@ import UIKit
 import Boomerang
 
 protocol SceneViewModelType: ViewModelType, ModelType {
-    var isFormSheet:Bool { get }
-    var isModal:Bool { get }
+    var isFormSheet: Bool { get }
+    var isModal: Bool { get }
     var sceneIdentifier: SceneIdentifier { get }
 }
 extension SceneViewModelType {
-    var isFormSheet:Bool { return false }
-    var isModal:Bool { return false }
+    var isFormSheet: Bool { return false }
+    var isModal: Bool { return false }
 }
 
 protocol TabSceneViewModelType: SceneViewModelType {

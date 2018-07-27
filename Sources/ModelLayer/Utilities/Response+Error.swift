@@ -11,7 +11,7 @@ import Moya
 import RxSwift
 import Gloss
 
-extension Observable where Element : Response {
+extension Observable where Element: Response {
     
     public func mapResponseError() -> Observable<Response> {
         

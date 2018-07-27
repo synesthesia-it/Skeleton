@@ -45,17 +45,17 @@ protocol WithImage {
 
 typealias ObservableImage = Observable<UIImage>
 
-extension UIImage : WithImage {
+extension UIImage: WithImage {
     func getImage() -> ObservableImage {
         return .just(self)
     }
 }
-extension URL : WithImage {
+extension URL: WithImage {
     func getImage() -> Observable<UIImage> {
         return ImageDownloader.download(self).catchErrorJustReturn(UIImage())
     }
 }
-extension String : WithImage {
+extension String: WithImage {
     func getImage() -> Observable<UIImage> {
         if let url = URL(string: self) {
             return url.getImage()

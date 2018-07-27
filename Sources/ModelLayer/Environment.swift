@@ -13,22 +13,22 @@ public enum Environment: String {
     case devel
     case production
     
-    public var name:String {
+    public var name: String {
         return self.rawValue
     }
     
-    public static func setup(with environment:Environment) {
+    public static func setup(with environment: Environment) {
         EnvironmentManager.currentEnvironment = environment
     }
     
-    public static var current:Environment {
+    public static var current: Environment {
         return EnvironmentManager.currentEnvironment
     }
     
 }
 
-fileprivate class EnvironmentManager {
+private class EnvironmentManager {
     
-    static var currentEnvironment:Environment! = .devel
+    static var currentEnvironment: Environment! = .devel
     
 }

@@ -3,7 +3,7 @@ import Action
 import UIKit
 import Boomerang
 
-enum SelectionValue : Boomerang.SelectionInput, Boomerang.SelectionOutput {
+enum SelectionValue: Boomerang.SelectionInput, Boomerang.SelectionOutput {
     case start
     case reload
     case restart
@@ -18,10 +18,10 @@ enum SelectionValue : Boomerang.SelectionInput, Boomerang.SelectionOutput {
 
 typealias SelectionInput = SelectionValue
 typealias SelectionOutput = SelectionValue
-typealias Selection = Action<SelectionInput,SelectionOutput>
+typealias Selection = Action<SelectionInput, SelectionOutput>
 
-protocol SelectableViewModelType : ViewModelType {
-    var selection : Selection { get }
+protocol SelectableViewModelType: ViewModelType {
+    var selection: Selection { get }
 }
 
 extension SelectableViewModelType {

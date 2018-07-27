@@ -14,7 +14,7 @@ import Action
 import ModelLayer
 
 protocol SelectableViewController {
-    func bind(to selection:Selection)
+    func bind(to selection: Selection)
 }
 
 extension ObservableType where E == ActionError {
@@ -28,17 +28,17 @@ extension ObservableType where E == ActionError {
     }
 }
 
-extension SelectableViewController where Self : UIViewController {
-    func bind(to selection:Selection) {
-        selection.errors.asObservable().unwrap().subscribe(onNext : {[weak self] in
+extension SelectableViewController where Self: UIViewController {
+    func bind(to selection: Selection) {
+        selection.errors.asObservable().unwrap().subscribe(onNext: {[weak self] in
             if let error = $0, let vc = self {
                 Router.error(error, from: vc).execute()
             }
-        }).disposed(by:self.disposeBag)
+        }).disposed(by: self.disposeBag)
         
         selection.executing.debounce(0.1, scheduler: MainScheduler.instance).subscribe(onNext: {[weak self] in
             $0 ? self?.showLoader() : self?.hideLoader()
-        }).disposed(by:disposeBag)
+        }).disposed(by: disposeBag)
         
         selection.elements.asObservable().subscribe(onNext: { [weak self] in
             switch $0 {
@@ -56,6 +56,6 @@ extension SelectableViewController where Self : UIViewController {
                 Router.restart()
             default : break
             }
-        }).disposed(by:disposeBag)
+        }).disposed(by: disposeBag)
     }
 }

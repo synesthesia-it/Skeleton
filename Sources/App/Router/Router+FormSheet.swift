@@ -11,7 +11,7 @@ import Boomerang
 import UIKit
 import MZFormSheetPresentationController
 extension UIViewControllerRouterAction {
-    public static func formSheet<Source: UIViewController>(from source:Source, to destination:UIViewController) -> RouterAction {
+    public static func formSheet<Source: UIViewController>(from source: Source, to destination: UIViewController) -> RouterAction {
         return UIViewControllerRouterAction.custom {
             
             let formSheet = MZFormSheetPresentationViewController(contentViewController: destination)

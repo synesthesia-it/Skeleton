@@ -19,7 +19,7 @@ class StringFormViewController: UIViewController, ViewModelBindable, SelectableV
     }
     var textView: UITextView = UITextView(frame: .zero)
     var viewModel: ViewModelType?
-    var bottomConstraint:Constraint?
+    var bottomConstraint: Constraint?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(textView)
