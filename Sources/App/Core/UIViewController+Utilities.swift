@@ -35,9 +35,9 @@ extension KeyboardAvoidable where Self: UIViewController {
         let vc = self as UIViewController
         vc.rx
             .methodInvoked(#selector(UIViewController.viewDidAppear(_:)))
-            .subscribe(onNext: {_ in
+            .subscribe(onNext: { [weak self] _ in
                 KeyboardAvoiding.avoidingBlock = nil
-                KeyboardAvoiding.avoidingView = self.keyboardAvoidingView
+                KeyboardAvoiding.avoidingView = self?.keyboardAvoidingView
             })
             .disposed(by: vc.disposeBag)
         
