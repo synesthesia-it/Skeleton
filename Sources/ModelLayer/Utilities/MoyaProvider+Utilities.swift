@@ -8,6 +8,7 @@ extension Reactive where Base: MoyaProviderType {
             .request(token)
             .asObservable()
             .mapResponseError()
+            .observeOn(DataManager.dispatchScheduler)
     }
     internal func request<T: JSONDecodable>(_ token: Base.Target, keyPath: String? = nil) -> Observable<T> {
         guard let keyPath = keyPath else {
