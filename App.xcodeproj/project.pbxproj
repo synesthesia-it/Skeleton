@@ -60,6 +60,10 @@
 		7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16C20FE120700B7BF55 /* Environment.swift */; };
 		7BFEF17020FE16BC00B7BF55 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16E20FE142800B7BF55 /* Logger.swift */; };
 		7BFEF17120FE171F00B7BF55 /* MoyaProvider+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */; };
+		A51CEB362142D12C00EDC4CF /* NSObject+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB352142D12C00EDC4CF /* NSObject+Style.swift */; };
+		A51CEB3A2142D15100EDC4CF /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB372142D15100EDC4CF /* UIView+Style.swift */; };
+		A51CEB3B2142D15100EDC4CF /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB382142D15100EDC4CF /* UIButton+Style.swift */; };
+		A51CEB3C2142D15100EDC4CF /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB392142D15100EDC4CF /* TextStyles.swift */; };
 		E5DF305E8F908CD6D939BBFB /* Pods_ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA24F43748D333F6771088F /* Pods_ModelLayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +157,10 @@
 		7BFEF16E20FE142800B7BF55 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		80913DCDF5D263AD534E7CB9 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		89C7BA52DF521B04920CD0E1 /* Pods-ModelLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.debug.xcconfig"; sourceTree = "<group>"; };
+		A51CEB352142D12C00EDC4CF /* NSObject+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Style.swift"; sourceTree = "<group>"; };
+		A51CEB372142D15100EDC4CF /* UIView+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
+		A51CEB382142D15100EDC4CF /* UIButton+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		A51CEB392142D15100EDC4CF /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		AD28076C8251B2688003162B /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -269,6 +277,10 @@
 		7B56121A20F6412C0098CE55 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				A51CEB392142D15100EDC4CF /* TextStyles.swift */,
+				A51CEB382142D15100EDC4CF /* UIButton+Style.swift */,
+				A51CEB372142D15100EDC4CF /* UIView+Style.swift */,
+				A51CEB352142D12C00EDC4CF /* NSObject+Style.swift */,
 				7B56121B20F6412C0098CE55 /* SeparatorLayout.swift */,
 				7B56121C20F6412C0098CE55 /* UIFont+Utilities.swift */,
 				7B56121D20F6412C0098CE55 /* UIColor+Utilities.swift */,
@@ -703,10 +715,13 @@
 				7B56129620F642760098CE55 /* ListPickerElementItemViewModel.swift in Sources */,
 				7B56129020F642760098CE55 /* TextItemView.swift in Sources */,
 				7B56125720F6412C0098CE55 /* Router+Preview.swift in Sources */,
+				A51CEB3A2142D15100EDC4CF /* UIView+Style.swift in Sources */,
 				7B56129920F6435E0098CE55 /* UIImagePickerController+Rx.swift in Sources */,
+				A51CEB3B2142D15100EDC4CF /* UIButton+Style.swift in Sources */,
 				7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */,
 				7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */,
 				7B56124E20F6412C0098CE55 /* SplashViewController.swift in Sources */,
+				A51CEB3C2142D15100EDC4CF /* TextStyles.swift in Sources */,
 				7B56124F20F6412C0098CE55 /* SplashViewModel.swift in Sources */,
 				7B56129320F642760098CE55 /* ImagePickerItemView.swift in Sources */,
 				7B56124920F6412C0098CE55 /* UIFont+Utilities.swift in Sources */,
@@ -717,6 +732,7 @@
 				7B56129C20F644010098CE55 /* StringFormViewController.swift in Sources */,
 				7B56124420F6412C0098CE55 /* UIView+Utilities.swift in Sources */,
 				7B56124C20F6412C0098CE55 /* Rx+Operators.swift in Sources */,
+				A51CEB362142D12C00EDC4CF /* NSObject+Style.swift in Sources */,
 				7B56124B20F6412C0098CE55 /* UIImage+Utilities.swift in Sources */,
 				7B56124D20F6412C0098CE55 /* Model+Boomerang.swift in Sources */,
 				7B56124820F6412C0098CE55 /* SeparatorLayout.swift in Sources */,
