@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		70CC57972148076B00BDD2FB /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 70CC579A2148076B00BDD2FB /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				70CC579B2148077100BDD2FB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		08D3A9B53179177B42816B38 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD28076C8251B2688003162B /* Pods_App.framework */; };
 		7B5611F020F634A10098CE55 /* ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5611E920F634A10098CE55 /* ModelLayer.framework */; };
@@ -533,6 +547,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Synesthesia;
 				TargetAttributes = {
+					70CC57972148076B00BDD2FB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					7B56116020F632320098CE55 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -556,6 +573,7 @@
 			targets = (
 				7B56116020F632320098CE55 /* App */,
 				7B5611E820F634A10098CE55 /* ModelLayer */,
+				70CC57972148076B00BDD2FB /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -669,6 +687,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		70CC579B2148077100BDD2FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/SwiftLint/swiftlint\" autocorrect --config \"${SRCROOT}/config.swiftlint.yml\" --path \"${SRCROOT}\"";
 		};
 		7B56120A20F63B380098CE55 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -787,6 +818,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		70CC57982148076B00BDD2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70CC57992148076B00BDD2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7B5611A620F632340098CE55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1004,6 +1051,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		70CC579A2148076B00BDD2FB /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70CC57982148076B00BDD2FB /* Debug */,
+				70CC57992148076B00BDD2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7B56115C20F632320098CE55 /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
