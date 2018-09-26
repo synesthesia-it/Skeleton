@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		08D3A9B53179177B42816B38 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD28076C8251B2688003162B /* Pods_App.framework */; };
+		70F5563B215B908A00A1C92F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16C20FE120700B7BF55 /* Environment.swift */; };
+		70F5563D215B909F00A1C92F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5563C215B909F00A1C92F /* Environment.swift */; };
 		7B5611F020F634A10098CE55 /* ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5611E920F634A10098CE55 /* ModelLayer.framework */; };
 		7B5611F120F634A10098CE55 /* ModelLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5611E920F634A10098CE55 /* ModelLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B56124120F6412C0098CE55 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121220F6412C0098CE55 /* ImageDownloader.swift */; };
@@ -71,7 +73,6 @@
 		7B56129C20F644010098CE55 /* StringFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129B20F644000098CE55 /* StringFormViewController.swift */; };
 		7B56129E20F645430098CE55 /* Router+FormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129D20F645430098CE55 /* Router+FormSheet.swift */; };
 		7B5612A020F646740098CE55 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56129F20F646740098CE55 /* LoremIpsum.swift */; };
-		7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16C20FE120700B7BF55 /* Environment.swift */; };
 		7BFEF17020FE16BC00B7BF55 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16E20FE142800B7BF55 /* Logger.swift */; };
 		7BFEF17120FE171F00B7BF55 /* MoyaProvider+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16920FE0F8000B7BF55 /* MoyaProvider+Utilities.swift */; };
 		A51CEB362142D12C00EDC4CF /* NSObject+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB352142D12C00EDC4CF /* NSObject+Style.swift */; };
@@ -114,6 +115,7 @@
 		272992F6210B5C170004ED30 /* config.swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.swiftlint.yml; sourceTree = "<group>"; };
 		3A17AB53F4BFC7CA7CED7370 /* Pods-ModelLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.release.xcconfig"; sourceTree = "<group>"; };
 		470A98FDB6187D6925902415 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		70F5563C215B909F00A1C92F /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		7B56116120F632320098CE55 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5611E920F634A10098CE55 /* ModelLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B56121220F6412C0098CE55 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 			children = (
 				7B56122920F6412C0098CE55 /* Assets.xcassets */,
 				7B56122A20F6412C0098CE55 /* LaunchScreen.storyboard */,
+				70F5563C215B909F00A1C92F /* Environment.swift */,
 				7B56122C20F6412C0098CE55 /* AppDelegate.swift */,
 				7B56122D20F6412C0098CE55 /* Info.plist */,
 			);
@@ -749,11 +752,11 @@
 				A51CEB3A2142D15100EDC4CF /* UIView+Style.swift in Sources */,
 				7B56129920F6435E0098CE55 /* UIImagePickerController+Rx.swift in Sources */,
 				A51CEB3B2142D15100EDC4CF /* UIButton+Style.swift in Sources */,
-				7BFEF16D20FE120700B7BF55 /* Environment.swift in Sources */,
 				7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */,
 				7B56124E20F6412C0098CE55 /* SplashViewController.swift in Sources */,
 				A51CEB3C2142D15100EDC4CF /* TextStyles.swift in Sources */,
 				7B56124F20F6412C0098CE55 /* SplashViewModel.swift in Sources */,
+				70F5563D215B909F00A1C92F /* Environment.swift in Sources */,
 				7B56129320F642760098CE55 /* ImagePickerItemView.swift in Sources */,
 				7B56124920F6412C0098CE55 /* UIFont+Utilities.swift in Sources */,
 				7B56124620F6412C0098CE55 /* Scene.swift in Sources */,
@@ -790,6 +793,7 @@
 				7B56126420F6415B0098CE55 /* Response+Error.swift in Sources */,
 				7BFEF17020FE16BC00B7BF55 /* Logger.swift in Sources */,
 				7B56126520F6415B0098CE55 /* Response+Gloss.swift in Sources */,
+				70F5563B215B908A00A1C92F /* Environment.swift in Sources */,
 				7B56126920F6415B0098CE55 /* DataManager+Rx.swift in Sources */,
 				7B56126820F6415B0098CE55 /* Errors.swift in Sources */,
 				7B56126720F6415B0098CE55 /* API.swift in Sources */,

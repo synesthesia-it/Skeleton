@@ -14,12 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Entry point to add more configurations
         #if DEVEL || DEBUG
-            environment = .devel
-            Logger.logLevel = .verbose
+        environment = .devel
+        
         #else
-            environment = .production
-            Logger.logLevel = .none
+        environment = .production
+        
         #endif
+        
         Environment.setup(with: environment)
 
         RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
