@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         Environment.setup(with: environment)
 
+        RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+        
         Router.start(self)
         // Override point for customization after application launch.
         return true

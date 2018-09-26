@@ -124,8 +124,13 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-extension RxNavigationControllerDelegateProxy: UIImagePickerControllerDelegate {
-
+open class RxImagePickerDelegateProxy
+: RxNavigationControllerDelegateProxy, UIImagePickerControllerDelegate {
+    
+    public init(imagePicker: UIImagePickerController) {
+        super.init(navigationController: imagePicker)
+    }
+    
 }
 #endif
 private func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T {
