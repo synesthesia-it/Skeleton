@@ -8,12 +8,16 @@
 
 import Foundation
 
-public protocol EnvironmentType {
+public protocol EnvironmentType: EnvironmentLocator {
     var name: String { get }
     var logLevel: LogLevel { get }
+    
+    var endpoint: String { get }
 }
 
-extension EnvironmentType {
+public protocol EnvironmentLocator {}
+
+extension EnvironmentLocator {
     public static func setup(with environment: EnvironmentType) {
         EnvironmentManager.currentEnvironment = environment
     }
@@ -23,8 +27,8 @@ extension EnvironmentType {
     }
     
 }
-
-private class EnvironmentManager {
+internal struct Environment: EnvironmentLocator {}
+internal class EnvironmentManager {
     private static var _env: EnvironmentType?
     
     static var currentEnvironment: EnvironmentType {

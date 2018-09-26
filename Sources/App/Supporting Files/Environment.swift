@@ -15,7 +15,12 @@ enum Environment: String, EnvironmentType {
     var name: String {
         return self.rawValue
     }
-    
+    var endpoint: String {
+        switch self {
+        case .devel: return ""
+        case .production: return ""
+        }
+    }
     var logLevel: LogLevel {
         switch self {
         case .production: return .none
@@ -24,3 +29,4 @@ enum Environment: String, EnvironmentType {
         
     }
 }
+
