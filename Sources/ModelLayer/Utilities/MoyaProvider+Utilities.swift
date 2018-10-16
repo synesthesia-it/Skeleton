@@ -36,3 +36,11 @@ extension DataManager {
         return array
     }
 }
+
+extension DataManager {
+    internal static func setupForTests() {
+        self.provider = MoyaProvider<API>( stubClosure: { _ -> StubBehavior in
+            return .immediate
+        }, plugins: DataManager.customPlugins())
+    }
+}

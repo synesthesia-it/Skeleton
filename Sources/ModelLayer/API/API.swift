@@ -12,6 +12,7 @@ import Moya
 enum API: TargetType {
     
     case example
+    
     var baseURL: URL {
         switch self {
         default : return URL(string: Environment.current.endpoint)!

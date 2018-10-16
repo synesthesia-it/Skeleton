@@ -16,7 +16,6 @@ import Action
 import SpinKit
 import Localize_Swift
 
-
 extension ViewModelBindable where Self: UIViewController {
     func withViewModel(_ viewModel: ViewModelType) -> Self {
         self.bind(to: viewModel, afterLoad: true)

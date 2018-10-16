@@ -13,5 +13,7 @@ import Alamofire
 import Gloss
 
 extension Reactive where Base: DataManager {
-
+    public static func example() -> Observable<()> {
+        return .just(())
+    }
 }

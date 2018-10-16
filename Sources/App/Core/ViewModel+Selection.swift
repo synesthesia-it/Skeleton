@@ -25,6 +25,18 @@ protocol SelectableViewModelType: ViewModelType {
     var selection: Selection { get }
 }
 
+extension Action where Input == SelectionInput, Element == SelectionOutput {
+    var viewModels: Observable<ViewModelType> {
+        return elements.map { out -> ViewModelType? in
+            switch out {
+            case .viewModel(let vm) : return vm
+            default: return nil
+            }
+        }
+        .ignoreNil()
+    }
+}
+
 extension SelectableViewModelType {
     
     func baseSwitch(input: SelectionInput) -> Observable<SelectionOutput>? {

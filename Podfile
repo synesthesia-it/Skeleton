@@ -27,6 +27,14 @@ def app_pods
     pod 'SpinKit'
 end
 
+def testing_pods
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxBlocking'
+    
+end
+
 def shared_pods
     use_frameworks!
     inhibit_all_warnings!
@@ -41,6 +49,9 @@ end
 
 target 'ModelLayer' do
     model_pods
+    target 'ModelLayerTests' do
+        testing_pods
+    end
 end
 
 #Add each app target to this array
@@ -49,6 +60,9 @@ end
     target t do
         use_frameworks!
         app_pods
+        target t + "Tests" do
+            testing_pods
+        end
     end
 end
 

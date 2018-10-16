@@ -3,6 +3,6 @@ import RxSwift
 import Gloss
 
 public class DataManager: ReactiveCompatible {
-    static let provider = MoyaProvider<API>(plugins: DataManager.customPlugins())
+    static var provider = MoyaProvider<API>(plugins: DataManager.customPlugins())
     static let dispatchScheduler = SerialDispatchQueueScheduler.init(qos: .utility)
 }

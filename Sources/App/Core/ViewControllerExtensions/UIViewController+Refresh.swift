@@ -9,7 +9,6 @@
 import UIKit
 import Boomerang
 
-
 protocol Refreshable: Collectionable {
     func setupRefreshable(viewModel: ListViewModelType)
 }
