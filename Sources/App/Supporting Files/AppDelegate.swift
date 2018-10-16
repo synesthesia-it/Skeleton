@@ -10,19 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let environment: Environment
+    
+        Environment.bootstrap()
         
-        //Entry point to add more configurations
-        #if DEVEL || DEBUG
-        environment = .devel
-        
-        #else
-        environment = .production
-        
-        #endif
-        
-        Environment.setup(with: environment)
-
+        //Used only for image picker
         RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
         
         Router.start(self)
