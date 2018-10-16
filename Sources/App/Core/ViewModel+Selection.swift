@@ -3,7 +3,7 @@ import Action
 import UIKit
 import Boomerang
 
-enum SelectionValue: Boomerang.SelectionInput, Boomerang.SelectionOutput {
+enum SelectionValue {
     case start
     case reload
     case restart
@@ -13,6 +13,7 @@ enum SelectionValue: Boomerang.SelectionInput, Boomerang.SelectionOutput {
     case item(IndexPath)
     case invalidateLayout
     case dismiss
+    case back
     case openPicker
 }
 

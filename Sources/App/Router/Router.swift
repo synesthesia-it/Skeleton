@@ -54,7 +54,7 @@ struct Router: RouterType {
                     .take(1)
                     
                     .map { info in
-                        return info[UIImagePickerControllerOriginalImage] as? UIImage
+                        return info[.originalImage] as? UIImage
                     }
                     .subscribe(onNext: { image in
                         viewModel.relay.accept([image ?? (UIImage())])

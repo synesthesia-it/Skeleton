@@ -15,7 +15,7 @@ def app_pods
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'SnapKit'
-    pod 'IHKeyboardAvoiding'
+    pod 'IHKeyboardAvoiding', :git => 'https://github.com/Kirow/IHKeyboardAvoiding.git', :branch => 'swift-4.2'
     pod 'MXParallaxHeader'
     pod 'Hero'
     pod 'MZFormSheetPresentationController'

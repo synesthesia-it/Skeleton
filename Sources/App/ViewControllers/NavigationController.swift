@@ -30,3 +30,9 @@ class NavigationController: UINavigationController, UINavigationBarDelegate {
         return false
     }
 }
+
+extension UIViewController {
+    func withNavigation() -> NavigationController {
+        return NavigationController(rootViewController: self)
+    }
+}

@@ -24,13 +24,18 @@
 		08D3A9B53179177B42816B38 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD28076C8251B2688003162B /* Pods_App.framework */; };
 		70F5563B215B908A00A1C92F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEF16C20FE120700B7BF55 /* Environment.swift */; };
 		70F5563D215B909F00A1C92F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5563C215B909F00A1C92F /* Environment.swift */; };
+		70FEC0AC2175DD9D001809B1 /* UIViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEC0AB2175DD9D001809B1 /* UIViewController+CollectionView.swift */; };
+		70FEC0AE2175DDCF001809B1 /* UIViewController+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEC0AD2175DDCF001809B1 /* UIViewController+Refresh.swift */; };
+		70FEC0B02175DDE9001809B1 /* UIViewController+KeyboardAvoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEC0AF2175DDE9001809B1 /* UIViewController+KeyboardAvoid.swift */; };
+		70FEC0B22175DE61001809B1 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEC0B12175DE61001809B1 /* UIViewController+Rx.swift */; };
+		70FEC0B42175DF6E001809B1 /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEC0B32175DF6E001809B1 /* UIViewController+Loader.swift */; };
 		7B5611F020F634A10098CE55 /* ModelLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5611E920F634A10098CE55 /* ModelLayer.framework */; };
 		7B5611F120F634A10098CE55 /* ModelLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5611E920F634A10098CE55 /* ModelLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B56124120F6412C0098CE55 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121220F6412C0098CE55 /* ImageDownloader.swift */; };
-		7B56124220F6412C0098CE55 /* ViewController+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121320F6412C0098CE55 /* ViewController+Selection.swift */; };
+		7B56124220F6412C0098CE55 /* UIViewController+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121320F6412C0098CE55 /* UIViewController+Selection.swift */; };
 		7B56124320F6412C0098CE55 /* ViewModel+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121420F6412C0098CE55 /* ViewModel+Selection.swift */; };
 		7B56124420F6412C0098CE55 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121520F6412C0098CE55 /* UIView+Utilities.swift */; };
-		7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121620F6412C0098CE55 /* UIViewController+Utilities.swift */; };
+		7B56124520F6412C0098CE55 /* UIViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121620F6412C0098CE55 /* UIViewController+Setup.swift */; };
 		7B56124620F6412C0098CE55 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121820F6412C0098CE55 /* Scene.swift */; };
 		7B56124720F6412C0098CE55 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121920F6412C0098CE55 /* View.swift */; };
 		7B56124820F6412C0098CE55 /* SeparatorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56121B20F6412C0098CE55 /* SeparatorLayout.swift */; };
@@ -116,13 +121,18 @@
 		3A17AB53F4BFC7CA7CED7370 /* Pods-ModelLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelLayer/Pods-ModelLayer.release.xcconfig"; sourceTree = "<group>"; };
 		470A98FDB6187D6925902415 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		70F5563C215B909F00A1C92F /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		70FEC0AB2175DD9D001809B1 /* UIViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		70FEC0AD2175DDCF001809B1 /* UIViewController+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Refresh.swift"; sourceTree = "<group>"; };
+		70FEC0AF2175DDE9001809B1 /* UIViewController+KeyboardAvoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAvoid.swift"; sourceTree = "<group>"; };
+		70FEC0B12175DE61001809B1 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		70FEC0B32175DF6E001809B1 /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
 		7B56116120F632320098CE55 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5611E920F634A10098CE55 /* ModelLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B56121220F6412C0098CE55 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		7B56121320F6412C0098CE55 /* ViewController+Selection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Selection.swift"; sourceTree = "<group>"; };
+		7B56121320F6412C0098CE55 /* UIViewController+Selection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Selection.swift"; sourceTree = "<group>"; };
 		7B56121420F6412C0098CE55 /* ViewModel+Selection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewModel+Selection.swift"; sourceTree = "<group>"; };
 		7B56121520F6412C0098CE55 /* UIView+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
-		7B56121620F6412C0098CE55 /* UIViewController+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilities.swift"; sourceTree = "<group>"; };
+		7B56121620F6412C0098CE55 /* UIViewController+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Setup.swift"; sourceTree = "<group>"; };
 		7B56121820F6412C0098CE55 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7B56121920F6412C0098CE55 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7B56121B20F6412C0098CE55 /* SeparatorLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLayout.swift; sourceTree = "<group>"; };
@@ -224,6 +234,20 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		70FEC0B52175E1AF001809B1 /* ViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B56121620F6412C0098CE55 /* UIViewController+Setup.swift */,
+				70FEC0B32175DF6E001809B1 /* UIViewController+Loader.swift */,
+				7B56121320F6412C0098CE55 /* UIViewController+Selection.swift */,
+				70FEC0B12175DE61001809B1 /* UIViewController+Rx.swift */,
+				70FEC0AB2175DD9D001809B1 /* UIViewController+CollectionView.swift */,
+				70FEC0AF2175DDE9001809B1 /* UIViewController+KeyboardAvoid.swift */,
+				70FEC0AD2175DDCF001809B1 /* UIViewController+Refresh.swift */,
+			);
+			path = ViewControllerExtensions;
+			sourceTree = "<group>";
+		};
 		7B56115820F632320098CE55 = {
 			isa = PBXGroup;
 			children = (
@@ -271,12 +295,11 @@
 		7B56121120F6412C0098CE55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				70FEC0B52175E1AF001809B1 /* ViewControllerExtensions */,
 				7B56126C20F642490098CE55 /* Pickers */,
 				7B56121220F6412C0098CE55 /* ImageDownloader.swift */,
-				7B56121320F6412C0098CE55 /* ViewController+Selection.swift */,
 				7B56121420F6412C0098CE55 /* ViewModel+Selection.swift */,
 				7B56121520F6412C0098CE55 /* UIView+Utilities.swift */,
-				7B56121620F6412C0098CE55 /* UIViewController+Utilities.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -702,7 +725,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/SwiftLint/swiftlint\" autocorrect --config \"${SRCROOT}/config.swiftlint.yml\" --path \"${SRCROOT}\"";
+			shellScript = "\"${SRCROOT}/Pods/SwiftLint/swiftlint\" autocorrect --config \"${SRCROOT}/config.swiftlint.yml\" --path \"${SRCROOT}\"\n";
 		};
 		7B56120A20F63B380098CE55 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -745,14 +768,15 @@
 			files = (
 				7B56129720F642760098CE55 /* ListPickerElementItemView.swift in Sources */,
 				7B56125820F6412C0098CE55 /* Router+Alert.swift in Sources */,
-				7B56124220F6412C0098CE55 /* ViewController+Selection.swift in Sources */,
+				7B56124220F6412C0098CE55 /* UIViewController+Selection.swift in Sources */,
 				7B56129620F642760098CE55 /* ListPickerElementItemViewModel.swift in Sources */,
 				7B56129020F642760098CE55 /* TextItemView.swift in Sources */,
 				7B56125720F6412C0098CE55 /* Router+Preview.swift in Sources */,
 				A51CEB3A2142D15100EDC4CF /* UIView+Style.swift in Sources */,
 				7B56129920F6435E0098CE55 /* UIImagePickerController+Rx.swift in Sources */,
 				A51CEB3B2142D15100EDC4CF /* UIButton+Style.swift in Sources */,
-				7B56124520F6412C0098CE55 /* UIViewController+Utilities.swift in Sources */,
+				7B56124520F6412C0098CE55 /* UIViewController+Setup.swift in Sources */,
+				70FEC0AE2175DDCF001809B1 /* UIViewController+Refresh.swift in Sources */,
 				7B56124E20F6412C0098CE55 /* SplashViewController.swift in Sources */,
 				A51CEB3C2142D15100EDC4CF /* TextStyles.swift in Sources */,
 				7B56124F20F6412C0098CE55 /* SplashViewModel.swift in Sources */,
@@ -762,6 +786,7 @@
 				7B56124620F6412C0098CE55 /* Scene.swift in Sources */,
 				7B56125620F6412C0098CE55 /* Router+Safari.swift in Sources */,
 				7B56127620F6425A0098CE55 /* Pickers.swift in Sources */,
+				70FEC0AC2175DD9D001809B1 /* UIViewController+CollectionView.swift in Sources */,
 				7B56124120F6412C0098CE55 /* ImageDownloader.swift in Sources */,
 				7B56129C20F644010098CE55 /* StringFormViewController.swift in Sources */,
 				7B56124420F6412C0098CE55 /* UIView+Utilities.swift in Sources */,
@@ -771,6 +796,7 @@
 				7B56124D20F6412C0098CE55 /* Model+Boomerang.swift in Sources */,
 				7B56124820F6412C0098CE55 /* SeparatorLayout.swift in Sources */,
 				7B56129E20F645430098CE55 /* Router+FormSheet.swift in Sources */,
+				70FEC0B22175DE61001809B1 /* UIViewController+Rx.swift in Sources */,
 				7B56127420F6425A0098CE55 /* ListFormViewController.swift in Sources */,
 				7B56124320F6412C0098CE55 /* ViewModel+Selection.swift in Sources */,
 				7B56125420F6412C0098CE55 /* AppDelegate.swift in Sources */,
@@ -778,6 +804,8 @@
 				7B56125920F6412C0098CE55 /* Router.swift in Sources */,
 				7B56124A20F6412C0098CE55 /* UIColor+Utilities.swift in Sources */,
 				7B56125120F6412C0098CE55 /* NavigationController.swift in Sources */,
+				70FEC0B42175DF6E001809B1 /* UIViewController+Loader.swift in Sources */,
+				70FEC0B02175DDE9001809B1 /* UIViewController+KeyboardAvoid.swift in Sources */,
 				7B56124720F6412C0098CE55 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,7 +996,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.synesthesia.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -989,7 +1017,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.synesthesia.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1016,7 +1044,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.synesthesia.ModelLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1045,7 +1073,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.synesthesia.ModelLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

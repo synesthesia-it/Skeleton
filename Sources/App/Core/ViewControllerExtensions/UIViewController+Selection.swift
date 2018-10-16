@@ -30,17 +30,24 @@ extension ObservableType where E == ActionError {
 
 extension SelectableViewController where Self: UIViewController {
     func bind(to selection: Selection) {
-        selection.errors.asObservable().unwrap().subscribe(onNext: {[weak self] in
+        selection.errors.asObservable().unwrap()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] in
             if let error = $0, let vc = self {
                 Router.error(error, from: vc).execute()
             }
         }).disposed(by: self.disposeBag)
         
-        selection.executing.debounce(0.1, scheduler: MainScheduler.instance).subscribe(onNext: {[weak self] in
-            $0 ? self?.showLoader() : self?.hideLoader()
-        }).disposed(by: disposeBag)
+        selection.executing
+            .observeOn(MainScheduler.instance)
+            .debounce(0.1, scheduler: MainScheduler.instance)
+            .bind(to: self.rx.isLoading())
+            .disposed(by: disposeBag)
         
-        selection.elements.asObservable().subscribe(onNext: { [weak self] in
+        selection.elements.asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
             switch $0 {
             case .invalidateLayout :
                 DispatchQueue.main.async {[weak self] in
@@ -48,12 +55,13 @@ extension SelectableViewController where Self: UIViewController {
                         (self as? Collectionable)?.collectionView.collectionViewLayout.invalidateLayout()
                     }, completion: nil)
                 }
+            case .viewModel(let viewModel) : Router.from(self, viewModel: viewModel).execute()
                 
-            case .viewModel(let viewModel) : Router.from(self!, viewModel:
-                viewModel).execute()
+            case .dismiss: self.dismiss(animated: true, completion: nil)
                 
-            case .restart :
-                Router.restart()
+            case .back: self.navigationController?.popViewController(animated: true)
+                
+            case .restart : Router.restart()
             default : break
             }
         }).disposed(by: disposeBag)
