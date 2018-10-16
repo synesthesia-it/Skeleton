@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RainbowSwift
+//import RainbowSwift
 
 public enum LogLevel: Int {
     case verbose = 1
@@ -15,13 +15,13 @@ public enum LogLevel: Int {
     case network = 20
     case error = 100
     case none = 1000
-    
+    //currently RainbowSwift is unsupported by XCode logger
     func colorize(string: String) -> String {
         switch self {
         case .verbose : return string
-        case .warning : return string.yellow
-        case .network : return string.blue
-        case .error: return string.red
+        case .warning : return string
+        case .network : return string
+        case .error: return string
         default : return string
         }
     }
