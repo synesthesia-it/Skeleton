@@ -1,5 +1,5 @@
 {
         "scripts": [""],
-        "foldersToRename" : ["App.xcworkspace", "App.xcodeproj"],
+        "foldersToRename" : ["App.xcodeproj"],
         "filePlaceholder": "App"    
 }
