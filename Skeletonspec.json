@@ -1,5 +1,6 @@
 {
         "scripts": ["sh install.sh"],
         "foldersToRename" : ["App.xcodeproj"],
-        "filePlaceholder": "App"    
+        "filePlaceholder": "App",
+        "remoteBones": ["https://github.com/synesthesia-it/Bones.git@develop"]
 }
